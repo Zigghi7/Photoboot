@@ -4,20 +4,45 @@ using UnrealBuildTool;
 
 public class Photoboot : ModuleRules
 {
-	public Photoboot(ReadOnlyTargetRules Target) : base(Target)
-	{
-		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
-	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput" });
+    public Photoboot(ReadOnlyTargetRules Target) : base(Target)
+    {
+        PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PrivateDependencyModuleNames.AddRange(new string[] {  });
+        PublicDependencyModuleNames.AddRange(
+            new string[]
+            {
+                "Core",
+                "CoreUObject",
+                "Engine",
+                "InputCore",
+                "UMG"
+            }
+        );
 
-		// Uncomment if you are using Slate UI
-		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
-		
-		// Uncomment if you are using online features
-		// PrivateDependencyModuleNames.Add("OnlineSubsystem");
+        PrivateDependencyModuleNames.AddRange(
+            new string[]
+            {
+                "Slate",
+                "SlateCore",
 
-		// To include OnlineSubsystemSteam, add it to the plugins section in your uproject file with the Enabled attribute set to true
-	}
+                // Webcam e Media Framework
+                "MediaAssets",
+
+                // Comunicazione HTTP con il backend Python
+                "HTTP",
+
+                // Lettura, conversione e compressione delle immagini
+                "ImageCore",
+                "RenderCore",
+                "RHI",
+
+                // Configurazioni del progetto
+                "Projects",
+
+                // Lettura e scrittura JSON
+                "Json",
+                "JsonUtilities"
+            }
+        );
+    }
 }

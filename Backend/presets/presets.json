@@ -1,0 +1,17 @@
+{
+  "superhero": {
+    "title": "Supereroe",
+    "description": "Trasformazione cinematografica in un supereroe originale.",
+    "prompt": "Transform the person into an original cinematic superhero while preserving recognizable facial identity."
+  },
+  "renaissance": {
+    "title": "Ritratto rinascimentale",
+    "description": "Trasformazione in un elegante dipinto rinascimentale.",
+    "prompt": "Transform the person into the subject of an elegant Renaissance oil portrait while preserving recognizable facial identity."
+  },
+  "space_explorer": {
+    "title": "Esploratore spaziale",
+    "description": "Trasformazione in un esploratore spaziale futuristico.",
+    "prompt": "Transform the person into a futuristic space explorer while preserving recognizable facial identity."
+  }
+}
