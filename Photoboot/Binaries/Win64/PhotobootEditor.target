@@ -2246,6 +2246,30 @@
 			"Type": "RequiredResource"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Compositing/OpenCVLensDistortion/Binaries/Win64/UnrealEditor-OpenCVLensCalibration.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Compositing/OpenCVLensDistortion/Binaries/Win64/UnrealEditor-OpenCVLensDistortion.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Compositing/OpenCVLensDistortion/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Compositing/OpenColorIO/Binaries/Win64/UnrealEditor-OpenColorIO.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Compositing/OpenColorIO/Binaries/Win64/UnrealEditor-OpenColorIOEditor.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Compositing/OpenColorIO/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/Compression/OodleNetwork/Binaries/Win64/UnrealEditor-OodleNetworkHandlerComponent.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -3378,6 +3402,34 @@
 			"Type": "RequiredResource"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Media/MediaFrameworkUtilities/Binaries/Win64/UnrealEditor-MediaFrameworkUtilities.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Media/MediaFrameworkUtilities/Binaries/Win64/UnrealEditor-MediaFrameworkUtilitiesEditor.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Media/MediaFrameworkUtilities/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Media/MediaIOFramework/Binaries/Win64/UnrealEditor-GPUTextureTransfer.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Media/MediaIOFramework/Binaries/Win64/UnrealEditor-MediaIOCore.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Media/MediaIOFramework/Binaries/Win64/UnrealEditor-MediaIOEditor.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Media/MediaIOFramework/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/Media/MediaPlate/Binaries/Win64/UnrealEditor-MediaPlate.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -3947,6 +3999,14 @@
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/Runtime/MsQuic/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Runtime/OpenCV/Binaries/Win64/UnrealEditor-OpenCVHelper.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Runtime/OpenCV/Binaries/Win64/UnrealEditor.modules",
 			"Type": "RequiredResource"
 		},
 		{
@@ -5369,6 +5429,10 @@
 		},
 		{
 			"Path": "$(EngineDir)/Binaries/ThirdParty/MsQuic/v220/win64/msquic.dll",
+			"Type": "NonUFS"
+		},
+		{
+			"Path": "$(EngineDir)/Binaries/ThirdParty/NVIDIA/GPUDirect/Win64/dvp.dll",
 			"Type": "NonUFS"
 		},
 		{
@@ -28032,6 +28096,14 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Compositing/OpenCVLensDistortion/OpenCVLensDistortion.uplugin",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Compositing/OpenColorIO/OpenColorIO.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/Compression/OodleNetwork/OodleNetwork.uplugin",
 			"Type": "UFS"
 		},
@@ -28444,6 +28516,14 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Media/MediaFrameworkUtilities/MediaFrameworkUtilities.uplugin",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Media/MediaIOFramework/MediaIOFramework.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/Media/MediaPlate/MediaPlate.uplugin",
 			"Type": "UFS"
 		},
@@ -28641,6 +28721,14 @@
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/Runtime/MsQuic/MsQuic.uplugin",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Runtime/OpenCV/Binaries/ThirdParty/Win64/opencv_world455.dll",
+			"Type": "NonUFS"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Runtime/OpenCV/OpenCV.uplugin",
 			"Type": "UFS"
 		},
 		{
@@ -28849,6 +28937,8 @@
 		"MassInsights",
 		"MaterialAnalyzer",
 		"MediaCompositing",
+		"MediaFrameworkUtilities",
+		"MediaIOFramework",
 		"MediaPlate",
 		"MediaPlayerEditor",
 		"MeshLODToolset",
@@ -28878,6 +28968,9 @@
 		"OnlineSubsystemNull",
 		"OnlineSubsystemUtils",
 		"OodleNetwork",
+		"OpenCV",
+		"OpenCVLensDistortion",
+		"OpenColorIO",
 		"Paper2D",
 		"PerforceSourceControl",
 		"PixWinPlugin",
