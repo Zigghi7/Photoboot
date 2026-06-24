@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Photoboot",
+			"Path": "..\\Source\\Photoboot.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "PhotobootEditor",
+			"Path": "..\\Source\\PhotobootEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

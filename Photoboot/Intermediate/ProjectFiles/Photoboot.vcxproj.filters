@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Photoboot.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Photoboot.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\PhotobootEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Photoboot">
+      <UniqueIdentifier>{32B2F396-5E58-318E-B7F8-E14D2AF883ED}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Photoboot\Photoboot.Build.cs">
+      <Filter>Source\Photoboot</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Photoboot\Photoboot.cpp">
+      <Filter>Source\Photoboot</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Photoboot\Photoboot.h">
+      <Filter>Source\Photoboot</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
