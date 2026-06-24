@@ -11,6 +11,8 @@
     <None Include="..\..\Source\PhotobootEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
+    <None Include="..\..\UpgradeLog.htm" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -37,6 +39,18 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\Photoboot\Photoboot.h">
       <Filter>Source\Photoboot</Filter>
+    </ClInclude>
+    <Filter Include="Source\Photoboot\Private">
+      <UniqueIdentifier>{DF46018A-6E38-3236-841A-D3AD0A807D08}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Photoboot\Private\PhotobootCameraActor.cpp">
+      <Filter>Source\Photoboot\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\Photoboot\Public">
+      <UniqueIdentifier>{8DC57159-2092-3A84-87D6-F00818CE2E61}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Photoboot\Public\PhotobootCameraActor.h">
+      <Filter>Source\Photoboot\Public</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

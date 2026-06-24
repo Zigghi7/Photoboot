@@ -7,7 +7,10 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "D:/Fork/Photoboot/Photoboot/Intermediate/Build/Win64/x64/PhotobootEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"D:/Fork/Photoboot/Photoboot/Intermediate/Build/Win64/x64/UnrealEditor/Development/Photoboot/Photoboot.init.gen.cpp.obj"
+"D:/Fork/Photoboot/Photoboot/Intermediate/Build/Win64/x64/UnrealEditor/Development/Photoboot/PhotobootCameraActor.gen.cpp.obj"
 "D:/Fork/Photoboot/Photoboot/Intermediate/Build/Win64/x64/UnrealEditor/Development/Photoboot/Photoboot.cpp.obj"
 "D:/Fork/Photoboot/Photoboot/Intermediate/Build/Win64/x64/UnrealEditor/Development/Photoboot/PerModuleInline.gen.cpp.obj"
+"D:/Fork/Photoboot/Photoboot/Intermediate/Build/Win64/x64/UnrealEditor/Development/Photoboot/PhotobootCameraActor.cpp.obj"
 "D:/Fork/Photoboot/Photoboot/Intermediate/Build/Win64/x64/UnrealEditor/Development/Photoboot/Default.rc2.res"
 /OUT:"D:/Fork/Photoboot/Photoboot/Intermediate/Build/Win64/x64/UnrealEditor/Development/Photoboot/UnrealEditor-Photoboot.lib"

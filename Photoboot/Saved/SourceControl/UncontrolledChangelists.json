@@ -5,7 +5,11 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"D:/Fork/Photoboot/Photoboot/Content/Maps/PhotoWithPrompt.umap"
+				"D:/Fork/Photoboot/Photoboot/Content/Maps/PhotoWithPrompt.umap",
+				"D:/Fork/Photoboot/Photoboot/Content/Photoboot/Media/MT_Webcam.uasset",
+				"D:/Fork/Photoboot/Photoboot/Content/Photoboot/Blueprint/BP_PhotobootCamera.uasset",
+				"D:/Fork/Photoboot/Photoboot/Content/Photoboot/Media/MP_Webcam.uasset",
+				"D:/Fork/Photoboot/Photoboot/Content/Photoboot/UI/WBP_WebcamTest.uasset"
 			]
 		}
 	]

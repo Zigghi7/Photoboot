@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\fork\\photoboot\\photoboot\\source\\photoboot\\private\\photobootcameraactor.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\fork\\photoboot\\photoboot\\intermediate\\build\\win64\\x64\\photobooteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\fork\\photoboot\\photoboot\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\photoboot\\definitions.photoboot.h",
+            "d:\\fork\\photoboot\\photoboot\\source\\photoboot\\public\\photobootcameraactor.h",
+            "d:\\fork\\photoboot\\photoboot\\intermediate\\build\\win64\\unrealeditor\\inc\\photoboot\\uht\\photobootcameraactor.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

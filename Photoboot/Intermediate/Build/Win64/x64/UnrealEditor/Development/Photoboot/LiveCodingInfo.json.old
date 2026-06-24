@@ -1,0 +1,9 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.Photoboot.gen.cpp.obj": [
+			"Photoboot.init.gen.cpp.obj",
+			"PhotobootCameraActor.gen.cpp.obj"
+		]
+	}
+}
