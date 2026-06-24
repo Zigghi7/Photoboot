@@ -1,4 +1,4 @@
-"C:/Users/Utente/Documents/Unreal Projects/Photoboot/Intermediate/Build/Win64/x64/PhotobootEditor/Development/Core/SharedPCH.Core.Cpp20.cpp"
+"D:/Fork/Photoboot/Photoboot/Intermediate/Build/Win64/x64/PhotobootEditor/Development/Core/SharedPCH.Core.Cpp20.cpp"
 /I "."
 /I "Runtime/Core/Public"
 /I "Runtime/Core/Internal"
@@ -15,10 +15,10 @@
 /external:I "C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/um"
 /external:I "C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/winrt"
 /Yc"SharedPCH.Core.Cpp20.h"
-/Fp"C:/Users/Utente/Documents/Unreal Projects/Photoboot/Intermediate/Build/Win64/x64/PhotobootEditor/Development/Core/SharedPCH.Core.Cpp20.h.pch"
-/Fo"C:/Users/Utente/Documents/Unreal Projects/Photoboot/Intermediate/Build/Win64/x64/PhotobootEditor/Development/Core/SharedPCH.Core.Cpp20.h.obj"
-/experimental:log "C:/Users/Utente/Documents/Unreal Projects/Photoboot/Intermediate/Build/Win64/x64/PhotobootEditor/Development/Core/SharedPCH.Core.Cpp20.h.sarif"
-/sourceDependencies "C:/Users/Utente/Documents/Unreal Projects/Photoboot/Intermediate/Build/Win64/x64/PhotobootEditor/Development/Core/SharedPCH.Core.Cpp20.h.dep.json"
+/Fp"D:/Fork/Photoboot/Photoboot/Intermediate/Build/Win64/x64/PhotobootEditor/Development/Core/SharedPCH.Core.Cpp20.h.pch"
+/Fo"D:/Fork/Photoboot/Photoboot/Intermediate/Build/Win64/x64/PhotobootEditor/Development/Core/SharedPCH.Core.Cpp20.h.obj"
+/experimental:log "D:/Fork/Photoboot/Photoboot/Intermediate/Build/Win64/x64/PhotobootEditor/Development/Core/SharedPCH.Core.Cpp20.h.sarif"
+/sourceDependencies "D:/Fork/Photoboot/Photoboot/Intermediate/Build/Win64/x64/PhotobootEditor/Development/Core/SharedPCH.Core.Cpp20.h.dep.json"
 /d2ssa-cfg-question-
 /Zc:inline
 /nologo

@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\utente\\documents\\unreal projects\\photoboot\\source\\photoboot\\photoboot.cpp",
+        "Source": "d:\\fork\\photoboot\\photoboot\\source\\photoboot\\photoboot.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\utente\\documents\\unreal projects\\photoboot\\intermediate\\build\\win64\\x64\\photobooteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "PCH": "d:\\fork\\photoboot\\photoboot\\intermediate\\build\\win64\\x64\\photobooteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
         "Includes": [
-            "c:\\users\\utente\\documents\\unreal projects\\photoboot\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\photoboot\\definitions.photoboot.h",
-            "c:\\users\\utente\\documents\\unreal projects\\photoboot\\source\\photoboot\\photoboot.h"
+            "d:\\fork\\photoboot\\photoboot\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\photoboot\\definitions.photoboot.h",
+            "d:\\fork\\photoboot\\photoboot\\source\\photoboot\\photoboot.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

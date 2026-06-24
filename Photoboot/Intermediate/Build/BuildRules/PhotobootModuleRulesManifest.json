@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\Utente\\Documents\\Unreal Projects\\Photoboot\\Source\\Photoboot\\Photoboot.Build.cs",
-		"C:\\Users\\Utente\\Documents\\Unreal Projects\\Photoboot\\Source\\Photoboot.Target.cs",
-		"C:\\Users\\Utente\\Documents\\Unreal Projects\\Photoboot\\Source\\PhotobootEditor.Target.cs"
+		"D:\\Fork\\Photoboot\\Photoboot\\Source\\Photoboot\\Photoboot.Build.cs",
+		"D:\\Fork\\Photoboot\\Photoboot\\Source\\Photoboot.Target.cs",
+		"D:\\Fork\\Photoboot\\Photoboot\\Source\\PhotobootEditor.Target.cs"
 	],
 	"EngineVersion": "5.6.1"
 }

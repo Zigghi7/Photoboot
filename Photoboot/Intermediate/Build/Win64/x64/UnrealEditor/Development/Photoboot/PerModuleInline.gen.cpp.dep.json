@@ -1,11 +1,11 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\utente\\documents\\unreal projects\\photoboot\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\photoboot\\permoduleinline.gen.cpp",
+        "Source": "d:\\fork\\photoboot\\photoboot\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\photoboot\\permoduleinline.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\utente\\documents\\unreal projects\\photoboot\\intermediate\\build\\win64\\x64\\photobooteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "PCH": "d:\\fork\\photoboot\\photoboot\\intermediate\\build\\win64\\x64\\photobooteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
         "Includes": [
-            "c:\\users\\utente\\documents\\unreal projects\\photoboot\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\photoboot\\definitions.photoboot.h",
+            "d:\\fork\\photoboot\\photoboot\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\photoboot\\definitions.photoboot.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl"
         ],
         "ImportedModules": [],
