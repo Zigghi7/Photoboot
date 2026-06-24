@@ -9,15 +9,22 @@ from fastapi import (
     FastAPI,
     File,
     Form,
-    Header,
     HTTPException,
+    Security,
     UploadFile,
     status,
 )
 from fastapi.responses import Response
+from fastapi.security import (
+    HTTPAuthorizationCredentials,
+    HTTPBearer,
+)
 
 from app.config import Settings, get_settings
-from app.image_service import InvalidImageError, create_mock_result
+from app.image_service import (
+    InvalidImageError,
+    create_mock_result,
+)
 from app.models import (
     HealthResponse,
     PresetListResponse,
@@ -39,25 +46,64 @@ ALLOWED_IMAGE_CONTENT_TYPES = {
 }
 
 
+# Definisce correttamente l'autenticazione Bearer
+# nella documentazione OpenAPI e in Swagger UI.
+kiosk_bearer_scheme = HTTPBearer(
+    scheme_name="KioskBearer",
+    description=(
+        "Token di autenticazione della postazione Photoboot. "
+        "Inserire soltanto il token, senza scrivere 'Bearer'."
+    ),
+    auto_error=False,
+)
+
+
 def _authorize_kiosk(
-    authorization_header: str | None,
+    credentials: HTTPAuthorizationCredentials | None,
     settings: Settings,
 ) -> None:
-    expected_authorization = (
-        f"Bearer {settings.kiosk_token}"
-    )
+    """
+    Controlla lo schema Bearer e confronta il token ricevuto
+    con quello configurato nel file .env.
+    """
 
-    received_authorization = (
-        authorization_header or ""
-    ).strip()
+    if credentials is None:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Token kiosk mancante.",
+            headers={
+                "WWW-Authenticate": "Bearer",
+            },
+        )
+
+    received_scheme = credentials.scheme.strip().lower()
+    received_token = credentials.credentials.strip()
+
+    if received_scheme != "bearer":
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Schema di autenticazione non valido.",
+            headers={
+                "WWW-Authenticate": "Bearer",
+            },
+        )
+
+    if not received_token:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Token kiosk vuoto.",
+            headers={
+                "WWW-Authenticate": "Bearer",
+            },
+        )
 
     if not secrets.compare_digest(
-        received_authorization,
-        expected_authorization,
+        received_token,
+        settings.kiosk_token,
     ):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Token kiosk mancante o non valido.",
+            detail="Token kiosk non valido.",
             headers={
                 "WWW-Authenticate": "Bearer",
             },
@@ -68,6 +114,10 @@ async def _read_uploaded_file(
     upload_file: UploadFile,
     maximum_size_bytes: int,
 ) -> bytes:
+    """
+    Legge il file caricato applicando un limite massimo.
+    """
+
     try:
         file_bytes = await upload_file.read(
             maximum_size_bytes + 1
@@ -94,10 +144,18 @@ async def _read_uploaded_file(
 async def application_lifespan(
     app: FastAPI,
 ) -> AsyncIterator[None]:
-    settings = get_settings()
+    """
+    Valida la configurazione all'avvio del backend.
+    """
+
+    del app
+
+    application_settings = get_settings()
 
     try:
-        load_presets(settings.presets_file_path)
+        load_presets(
+            application_settings.presets_file_path
+        )
     except PresetConfigurationError as error:
         raise RuntimeError(
             f"Configurazione dei preset non valida: {error}"
@@ -107,6 +165,7 @@ async def application_lifespan(
 
 
 settings = get_settings()
+
 
 app = FastAPI(
     title=settings.app_name,
@@ -125,6 +184,10 @@ app = FastAPI(
     tags=["System"],
 )
 async def health() -> HealthResponse:
+    """
+    Verifica che il backend sia attivo.
+    """
+
     return HealthResponse(
         status="ok",
         service=settings.app_name,
@@ -139,6 +202,10 @@ async def health() -> HealthResponse:
     tags=["Presets"],
 )
 async def list_presets() -> PresetListResponse:
+    """
+    Restituisce la lista dei preset disponibili.
+    """
+
     presets = load_presets(
         settings.presets_file_path
     )
@@ -165,7 +232,10 @@ async def list_presets() -> PresetListResponse:
             "content": {
                 "image/jpeg": {}
             },
-            "description": "JPEG verticale elaborato dal backend mock.",
+            "description": (
+                "JPEG verticale elaborato "
+                "dal backend mock."
+            ),
         },
         400: {
             "description": "Richiesta non valida.",
@@ -194,24 +264,26 @@ async def generate_mock(
             description="Fotografia da elaborare."
         ),
     ],
-    authorization: Annotated[
-        str | None,
-        Header(
-            description=(
-                "Token nel formato: "
-                "Bearer dev-kiosk-token-change-me"
-            )
-        ),
-    ] = None,
+    credentials: Annotated[
+        HTTPAuthorizationCredentials | None,
+        Security(kiosk_bearer_scheme),
+    ],
 ) -> Response:
+    """
+    Riceve una fotografia e restituisce un'immagine
+    verticale elaborata in modalità mock.
+    """
+
     _authorize_kiosk(
-        authorization_header=authorization,
+        credentials=credentials,
         settings=settings,
     )
 
     request_id = uuid.uuid4().hex
 
-    normalized_preset_id = preset_id.strip().lower()
+    normalized_preset_id = (
+        preset_id.strip().lower()
+    )
 
     if not normalized_preset_id:
         raise HTTPException(
@@ -276,7 +348,9 @@ async def generate_mock(
         headers={
             "Cache-Control": "no-store",
             "X-Photoboot-Request-ID": request_id,
-            "X-Photoboot-Preset-ID": selected_preset.preset_id,
+            "X-Photoboot-Preset-ID": (
+                selected_preset.preset_id
+            ),
             "X-Photoboot-Mock": "true",
         },
     )
